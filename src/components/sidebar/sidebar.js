@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux'
 import { selectedPage } from '../../redux/ac'
 import nav from './nav'
@@ -12,11 +12,11 @@ function Sidebar(props) {
     )
 
     return (
-        <Fragment>
+        <>
             <aside className="sidenav">
                 <ul className="sidenav__ul">{sidenav}</ul>
             </aside>
-        </Fragment>
+        </>
     )
 }
 
