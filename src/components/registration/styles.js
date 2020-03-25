@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from "react-router-dom"
+import colors from '../../theme/colors'
 
 export const Section = styled.section`
     padding: 100px 0;
@@ -21,7 +22,7 @@ export const Col6 = styled.div`
 export const Title = styled.h1`
     text-align: left;
     display: block;
-    color: #2b2d38;
+    color: ${colors.gray800};
     font-size: 35px;
     font-weight: 700;
     letter-spacing: -.2px;
@@ -31,7 +32,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.p`
     text-align: left;
-    color: #3b3e4d;
+    color: ${colors.gray600};
     font-size: 20px;
     letter-spacing: .1px;
     line-height: 35px;
@@ -41,10 +42,10 @@ export const Subtitle = styled.p`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: ${colors.white};
     border-radius: 10px;
-    border-top: 9px solid #4c7af1;
-    box-shadow: 0 3px 16px 0 rgba(154, 160, 185, .05), 0 10px 40px 0 rgba(166, 173, 201, .41);
+    border-top: 9px solid ${colors.blue};
+    box-shadow: ${colors.shadow100};
     max-width: 100%;
     padding: 30px 0;
     position: relative;
@@ -59,16 +60,16 @@ export const Wrap = styled.div`
 `;
 
 export const Label = styled.label`
-    color: #2b2d38;
+    color: ${colors.gray800};
     font-size: 14px;
     line-height: 18px;
 `;
 
 export const Upload = styled.label`
-    border: 1px solid #e4e6f2;
+    border: 1px solid ${colors.gray200};
     display: flex;
     align-items: center;
-    color: #ccc;
+    color: ${colors.gray400};
     border-radius: 3px;
     box-sizing: border-box;
     height: 40px;
@@ -90,7 +91,7 @@ export const Inner = styled.div`
 `;
 
 export const Input = styled.input`
-    border: 1px solid #e4e6f2;
+    border: 1px solid ${colors.gray200};
     border-radius: 3px;
     box-sizing: border-box;
     height: 40px;
@@ -102,7 +103,7 @@ export const Input = styled.input`
     transition: box-shadow .2s;
     width: 100%;
     ${props => props.error && css`
-        border-color: rgba(242, 52, 82, .5) !important;
+        border-color: ${colors.lightRed} !important;
     `}
 `;
 
@@ -111,7 +112,7 @@ export const TypeFile = styled.input`
 `;
 
 export const Textarea = styled.textarea`
-    border: 1px solid #e4e6f2;
+    border: 1px solid ${colors.gray200};
     border-radius: 3px;
     box-sizing: border-box;
     line-height: 17px;
@@ -124,8 +125,8 @@ export const Textarea = styled.textarea`
 `;
 
 export const Select = styled.select`
-    border: 1px solid #e4e6f2;
-    background: #fff;
+    border: 1px solid ${colors.gray200};
+    background: ${colors.white};
     border-radius: 3px;
     box-sizing: border-box;
     height: 40px;
@@ -147,7 +148,7 @@ export const Option = styled.option`
 
 export const Errors = styled.span`
     height: 24px;
-    color: #f23452;
+    color: ${colors.red};
     font-size: 13px;
     filter: none;
     letter-spacing: 0;
@@ -167,12 +168,15 @@ export const Btn = styled.button`
     height: 50px;
     padding: 0 40px;
     border-radius: 100px;
-    background: #15c39a;
-    color: #fff;
+    background: ${colors.green};
+    color: ${colors.white};
     border: none;
     cursor: pointer;
     transition: all .2s;
     outline: none;
+    &:hover {
+        background-color: ${colors.lightGreen};
+    }
 `;
 
 export const Sidebar = styled.aside`
@@ -186,7 +190,7 @@ export const Sidebar = styled.aside`
 
 export const Info = styled.article`
     width: 310px;
-    border-top: 1px solid #c6cbde;
+    border-top: 1px solid ${colors.gray200};
     margin-top: 48px;
     opacity: .8;
     padding-top: 48px;
@@ -194,7 +198,7 @@ export const Info = styled.article`
 
 
 export const InfoTitle = styled.h3`
-    color: #60657b;
+    color: ${colors.gray600};
     font-weight: 800;
     line-height: 32px;
     margin-bottom: 8px;
@@ -202,7 +206,7 @@ export const InfoTitle = styled.h3`
 `;
 
 export const InfoDescription = styled.p`
-    color: #878ea6;
+    color: ${colors.gray600};
     font-size: 18px;
     letter-spacing: 0;
     line-height: 27px;
@@ -210,7 +214,7 @@ export const InfoDescription = styled.p`
 `;
 
 export const InfoLink = styled(Link)`
-    color: #4c7af1;
+    color: ${colors.blue};
     cursor: pointer;
     display: table-cell;
     font-size: 18px;

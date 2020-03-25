@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useFormik } from 'formik';
 import validate from './validation'
 import selectApi from './api'
@@ -50,7 +50,7 @@ const Registration = () => {
   )
 
   return (
-    <Fragment>
+    <>
       <Section>
         <Wrapper>
           <Row>
@@ -209,7 +209,7 @@ const Registration = () => {
         </Wrapper>
         
       </Section>
-    </Fragment>
+    </>
     
   );
 };
